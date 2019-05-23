@@ -12,9 +12,6 @@ double main (int argc, char *argv[]){
 
 unsigned long long int racine_carre(unsigned long long int valeur, int precision){
 
-	printf("%llu\n",valeur);
-
-
 	if (valeur == 0 || valeur == 1){
 		
 		return valeur;

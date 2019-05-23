@@ -1,18 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-long double racine_carre(unsigned long long int valeur, int precision);
+unsigned long long int racine_carre(unsigned long long int valeur, int precision);
 
 double main (int argc, char *argv[]){
 
-	unsigned long long int valeur = atoll(argv[1]);
+	char * pointeur_fin = argv[argc];
+
+	unsigned long long int valeur = strtoull(argv[1], '\0', 10);
 
 
-	printf("%LF\n",racine_carre(valeur, 100));
+	printf("%llu\n",racine_carre(valeur, 100));
 
 }
 
-long double racine_carre(unsigned long long int valeur, int precision){
+unsigned long long int racine_carre(unsigned long long int valeur, int precision){
+
+		printf("%llu\n",valeur);
 
 
 	if (valeur == 0 || valeur == 1){
@@ -21,7 +25,7 @@ long double racine_carre(unsigned long long int valeur, int precision){
 
 	}
 
-	long double hypothese = valeur/2;
+	unsigned long long int hypothese = valeur/2;
 
 	// methode de newton
 	for(int i = 0 ; i < precision; i++){

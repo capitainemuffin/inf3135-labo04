@@ -3,10 +3,12 @@
 
 unsigned long long int racine_carre(unsigned long long int valeur, int precision);
 
-double main (int argc, char *argv[]){
+int main (int argc, char *argv[]){
 
 	unsigned long long int valeur = strtoull(argv[1], '\0', 10);
 	printf("%llu\n",racine_carre(valeur, 100));
+
+	return 0;
 
 }
 
